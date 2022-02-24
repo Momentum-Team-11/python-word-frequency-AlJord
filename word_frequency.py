@@ -21,8 +21,6 @@ def print_word_freq(file):
                 stripped_text += char
         line_break = stripped_text.replace('\n','').replace('—', ' ')
         squeaky_clean = line_break.split(" ")
-        
-        
 
     working_words = {}
     for words in squeaky_clean:
@@ -32,13 +30,9 @@ def print_word_freq(file):
             else:
                 working_words[words] = 1
     
-    
     working_words = sorted(working_words.items(), key=lambda seq: seq[1], reverse = True)
     for words, count in working_words:
-        print(words,'|',count, count * '*')
-
-    
-
+        print(f"{words:>20} | {(count * '*'):<20}")
 
 
 if __name__ == "__main__":
