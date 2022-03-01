@@ -32,7 +32,8 @@ def print_word_freq(file):
     
     working_words = sorted(working_words.items(), key=lambda seq: seq[1], reverse = True)
     for words, count in working_words:
-        print(f"{words:>20} | {(count * '*'):<20}")
+        print(f"{words:>20} | {count} {(count * '*'):<20}")
+
 
 
 if __name__ == "__main__":
